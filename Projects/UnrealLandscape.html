@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia Callesen Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Vollkorn', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        /* Menu Bar */
+        .menu-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 40px 2%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Left Social Buttons */
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-button {
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+        }
+
+        /* Right Menu Links */
+        .menu-links {
+            display: flex;
+            gap: 5px;
+            margin-right: 50px;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Contact Button */
+        .contact-button {
+            border: 2px solid #FFFFFF;
+            padding: 8px 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        /* Horizontal Line */
+        .horizontal-line-1 {
+            width: 100%;
+            border-top: 33px solid #A9A9A9;
+            margin-top: 90px; /* Space below menu bar */
+        }
+
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            max-width: 1000px; /* Center content with 3.5" space on either side */
+            padding: 0 0.5in;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        /* Header styling */
+        .main-header {
+            margin-top: 1in;
+            text-align: center;
+        }
+
+        /* Intro Text */
+        .intro-text {
+            margin-top: 0.75in;
+            font-size: 1em;
+        }
+
+        /* Role Header */
+        .role-header {
+            margin-top: 0.5in;
+            font-size: 1.2em;
+        }
+
+        /* Role Text */
+        .role-text {
+            margin-top: 0.15in;
+            font-size: 1em;
+        }
+
+        /* Media item section */
+        .media-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0.5in;
+        }
+
+        /* Image and video styling */
+        .media-item {
+            max-width: 100%;
+            margin-top: 0.5in;
+            margin-left: 2in;
+            margin-right: 2in;
+        }
+
+        /* Add 1.5in margin below the last video */
+        .last-video {
+            margin-bottom: 0.75in;
+        }
+
+         /* Horizontal Line */
+         .horizontal-line-2 {
+            width: 100%;
+            border-top: 1px solid #A9A9A9;
+            margin-top: 70px; /* Space below menu bar */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #FFFFFF;
+            margin-top: 0.5in; /* Reduced space above footer */
+            padding-bottom: 10px; /* Reduced space below footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <!-- Left Side: Social Buttons -->
+        <div class="social-buttons">
+            <a href="mailto:scallesen20@gmail.com" class="social-button" style="background-image: url('mail.png');" target="_blank"></a>
+            <a href="https://www.youtube.com/@SophiaCallesen" class="social-button" style="background-image: url('youtube.png');" target="_blank"></a>
+            <a href="https://www.instagram.com/sophia_callesen20/" class="social-button" style="background-image: url('insta.png');" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/sophia-callesen-205326218/" class="social-button" style="background-image: url('linkedin2.png');" target="_blank"></a>
+        </div>
+        
+        <!-- Right Side: Menu Links and Contact Button -->
+        <div class="menu-links">
+            <a href="../index.html" class="menu-item">Home</a>
+            <a href="../about.html" class="menu-item">About</a>
+            <a href="../work.html" class="menu-item">Work</a>
+            <a href="https://scallese.wixsite.com/mysite" class="menu-item" target="_blank">AIR</a>
+            <a href="mailto:scallesen20@gmail.com" class="contact-button">Contact</a>
+        </div>
+    </div>
+
+    <!-- Horizontal Line -->
+    <div class="horizontal-line-1"></div>
+
+    <!-- Centered Main Content -->
+    <div class="content-wrapper">
+        
+        <!-- Header Section -->
+        <h1 class="main-header">Frasassi Grotte</h1>
+        
+        <!-- Intro Text Section -->
+        <p class="intro-text">The objective of this project was to create a landscape scene in Unreal Engine, 
+            making use of sculting tools, painting tools, materials & textures, and water & wave boxes.
+            <br><br>The inspiration for creating this landscape was the Frasassi Grotte that can be found in Ancona, Italy.
+                    A beautiful mountain range conceals the entrance to the caves, which open up to winding pockets of stalagmites and pools of water.</p>
+
+        <!-- Role Header -->
+        <h2 class="role-header">Role:</h2>
+        
+        <!-- Role Description -->
+        <p class="role-text">Designer & Developer (Engine: Unreal Engine 5.4)</p>
+
+        <!-- Role Header -->
+        <h2 class="role-header">Media:</h2>
+
+        <!-- Role Description -->
+            <p class="role-text">~The first 4 images depict the environment that was sculpted in the landscape mode without the addition of any extra components or materials.
+            <br>~The 5th image depicts the body of water created for the scene, including the color changing component that occurs when the player goes under
+                    the water.
+            <br>~The 6th - 8th images depict different angles of the body of water within the landscape.
+            <br>~The video illustrates the landscape in its entirety. </p>
+            
+    <!-- Media Content Section -->
+    <div class="media-section">
+        <!-- Images and videos stacked with spacing as described -->
+        <img src="UnrealPCG Pics/1.png" alt="Image 1" class="media-item">
+        <img src="UnrealPCG Pics/2.png" alt="Image 2" class="media-item">
+        <img src="UnrealPCG Pics/3.png" alt="Image 3" class="media-item">
+        <img src="UnrealPCG Pics/4.png" alt="Image 4" class="media-item">
+        <img src="UnrealPCG Pics/5.png" alt="Image 5" class="media-item">
+        <img src="UnrealPCG Pics/6.png" alt="Image 6" class="media-item">
+        <img src="UnrealPCG Pics/7.png" alt="Image 7" class="media-item">
+        <img src="UnrealPCG Pics/8.png" alt="Image 7" class="media-item">
+        <video src="UnrealPCG Pics/9.mov" muted playsinline controls class="media-item last-video"></video>
+    </div>
+        
+    <!-- Second Horizontal Line -->
+    <div class="horizontal-line-2"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Created By: Sophia Callesen | With Gratitude ❤️<br><br>Feel Free to Reach Out to Collaborate!<br><br><br>
+    </footer>
+</body>
+</html>

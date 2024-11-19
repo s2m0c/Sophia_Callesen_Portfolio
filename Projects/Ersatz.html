@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia Callesen Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Vollkorn', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        /* Menu Bar */
+        .menu-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 40px 2%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Left Social Buttons */
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-button {
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+        }
+
+        /* Right Menu Links */
+        .menu-links {
+            display: flex;
+            gap: 5px;
+            margin-right: 50px;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Contact Button */
+        .contact-button {
+            border: 2px solid #FFFFFF;
+            padding: 8px 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        /* Horizontal Line */
+        .horizontal-line-1 {
+            width: 100%;
+            border-top: 33px solid #A9A9A9;
+            margin-top: 90px; /* Space below menu bar */
+        }
+
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            max-width: 1000px; /* Center content with 3.5" space on either side */
+            padding: 0 0.5in;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        /* Header styling */
+        .main-header {
+            margin-top: 1in;
+            text-align: center;
+        }
+
+        /* Intro Text */
+        .intro-text {
+            margin-top: 0.75in;
+            font-size: 1em;
+        }
+
+        /* Role Header */
+        .role-header {
+            margin-top: 0.5in;
+            font-size: 1.2em;
+        }
+
+        /* Role Text */
+        .role-text {
+            margin-top: 0.15in;
+            font-size: 1em;
+        }
+
+/* Media Section Styling */
+.media-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1in;
+}
+
+/* Image Row Styling */
+.image-row {
+    display: flex;
+    gap: 0.125in; /* 1/8 inch gap between images */
+    margin-bottom: 0.5in; /* 0.5 inch space between rows */
+}
+
+/* Image Styling */
+.media-item {
+    width: calc(50% - 0.125in); /* Adjust width to fit side-by-side */
+    object-fit: cover; /* Ensures the entire image fits */
+}
+
+        /* Image and Video Styling */
+        .media-container {
+            display: flex;
+            justify-content: center;
+            margin: 0.5in auto; /* 1 inch of space between video containers */
+            max-width: calc(100% - 1in); /* 0.5 inch on each side */
+        }
+
+        .media-container img, .media-container iframe {
+            width: 100%;
+            height: 500px; /* Set this to the desired height */
+        }
+
+        /* Last Video Spacing */
+        .video-container:last-of-type {
+            margin-bottom: 0.75in;
+        }
+
+         /* Horizontal Line */
+         .horizontal-line-2 {
+            width: 100%;
+            border-top: 1px solid #A9A9A9;
+            margin-top: 70px; /* Space below menu bar */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #FFFFFF;
+            margin-top: 0.5in; /* Reduced space above footer */
+            padding-bottom: 10px; /* Reduced space below footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <!-- Left Side: Social Buttons -->
+        <div class="social-buttons">
+            <a href="mailto:scallesen20@gmail.com" class="social-button" style="background-image: url('mail.png');" target="_blank"></a>
+            <a href="https://www.youtube.com/@SophiaCallesen" class="social-button" style="background-image: url('youtube.png');" target="_blank"></a>
+            <a href="https://www.instagram.com/sophia_callesen20/" class="social-button" style="background-image: url('insta.png');" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/sophia-callesen-205326218/" class="social-button" style="background-image: url('linkedin2.png');" target="_blank"></a>
+        </div>
+        
+        <!-- Right Side: Menu Links and Contact Button -->
+        <div class="menu-links">
+            <a href="../index.html" class="menu-item">Home</a>
+            <a href="../about.html" class="menu-item">About</a>
+            <a href="../work.html" class="menu-item">Work</a>
+            <a href="https://scallese.wixsite.com/mysite" class="menu-item" target="_blank">AIR</a>
+            <a href="mailto:scallesen20@gmail.com" class="contact-button">Contact</a>
+        </div>
+    </div>
+
+    <!-- Horizontal Line -->
+    <div class="horizontal-line-1"></div>
+
+    <!-- Centered Main Content -->
+    <div class="content-wrapper">
+        
+        <!-- Header Section -->
+        <h1 class="main-header">ERSATZ</h1>
+        
+        <!-- Intro Text Section -->
+        <p class="intro-text">"ERSATZ" created a space that invited people to obtain temporary cartharsis about their insecurities by allowing
+                                participants to break through them mentally, emotionally, and physically. This project emphasized 
+                                the process of breaking in order to rebuild one's self and embracing one's own insecurities. Participants accomplished this 
+                                by physically writing down their insecurities, smashing the tile they wrote them on, and then added pieces to a collective mosaic. 
+                                The final mosaic piece that the participants created, utilized the broken pieces of insecurities that each participant chose to share 
+                                with everyone, illustrating the beauty of themselves, community, and the idea of "having fallacies." ERSATZ's main objective was to make 
+                                people feel heard and like they are not alone in this world.
+                                <br><br>Many sources inspired the creation and design of ERSATZ. The initial idea sprang from two readings: Suzan Lori Parks's "New Black Math" and Legacy 
+                                Russell's "Glitch Feminism." 
+                                <br><br>Parks's paper focused on the idea that “We gotta crack the heart wide open cause when it healed up last time it healed up wrong, 
+                                crack it open and reset it, heal it right. Crack the mind wide open cause when it healed up, our thoughts healed up wrong.” This paper explicated how we as a 
+                                society have failed to become a better community due discrimination being prevalent and increasing with each passing day. Even having gone through the racial discrimination 
+                                our country has, we failed to learn, build, and become beter, more accepting, and welcoming people. We had the chance to learn and change, but we as a society chose not to and 
+                                have unfathomably become worse. Parks states that the only way we can fix this is by taking the subject head on, breaking it open, and rehealing ourselves. In this way, I hoped to create an 
+                                experience that allowed participants to go through this practice themselves internally. I wanted people to face their biggest insecurities head on and really sit with them, and then I wanted 
+                                to give each person the opportunity to physically break that insecurity by smashins a tile with their insecurity onto the ground. And then, I wanted them to take those pieces and 
+                                choose which ones they thoought were beautiful and add them a community mosaic to show them that what feels restricting can be broken and can be beautiful. 
+                                <br><br>Russell's book focused on the idea of glitch. 
+                                She stated that glitch is about traversing along the edges and stepping to the limits. It's about claiming our right to complexity, to range within. Glitch moves and breaks binaries and boundaries. To me, 
+                                Glitch is your TRUE self, breaking away from any binaric system or train of thought. When you emrbace the glitch, you become YOU. I wanted people to unfetter themselves from the insecurities that they have due to 
+                                society telling them they must fit in some cookie-cutter mold and box. I didn't just want people to step out of these boxes... I wanted people to BREAK them, SHATTER them, OBLITERATE them. And then, I wanted them to 
+                                create something beautiful with them because everyone is beautiful in their own special, unique way. 
+                                <br><br>ERSATZ welcomed a community that demanded and created positive change. ERSATZ welcomed people of all identities and expressions. ERSATZ made people heard. Welcome to ERSATZ. Welcome to the revolution that is: The Glitch... 
+            <br><br><br>*For more information & documentation about this project follow this <a href="https://scallese.wixsite.com/ersatzglitch" target="_blank" rel="noopener noreferrer">link</a>*
+            <br><br>*This piece premiered at a showcase called "Mash Up Collaboration" produced by Robert Farid Karimi in Katzin Hall at Arizona State University*</p>
+
+        <!-- Role Header -->
+        <h2 class="role-header">Role:</h2>
+
+        <!-- Role Description -->
+            <p class="role-text">Photographer & Videographer (Canon 77D)
+                <br>Designer and Editor (Adobe PremierePro & Photoshop)
+                <br>Audio Editor (Garage Band & REAPER)
+                <br>Graphic Designer (Procreate & Photoshop)
+                <br>Website Builder
+                <br>Documentor
+                <br>Performer
+                <br>Live Projection
+                <br>Live Immersive Experience
+            </p>
+
+        <!-- Role Header -->
+        <h2 class="role-header">Media:</h2>
+
+        <!-- Role Description -->
+            <p class="role-text">~The first 8 images depict the pre-production and playtesting portion of creating the experience.
+            <br>~The next 11 images depict participants going through the live immersive experience.
+            <br>~The last 3 images depict the time progression of the community of mosaic from the playtesting stage to the final piece created.
+            <br>~The 1st video illustrates the intro video participants would see just before entering the experience
+            <br>~The 2nd video illustrates the insecurity loop video that would play inside the 2nd room of the experience.
+            <br>~The last video illustrates a walkthroguh of the live setup & experience prior to the event beginning.</p>
+
+        <!-- Media Content Section -->
+        <div class="media-section">
+            <!-- Image rows with 2 images per row -->
+            <div class="image-row">
+                <img src="ERSATZ Pics/2.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/3.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/4.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/5.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/6.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/7.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/8.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/9.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/10.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/11.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/12.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/13.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/14.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/15.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/16.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/17.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/18.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/19.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/20.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/21.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="ERSATZ Pics/22.png" alt="Image 1" class="media-item">
+                <img src="ERSATZ Pics/1.png" alt="Image 2" class="media-item">
+            </div>
+        </div>
+
+        <!-- Video Section -->
+            <div class="media-container video-container">
+                <iframe src="https://youtube.com/embed/3gXOCUdgN_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="https://youtube.com/embed/T4Ywa9xDQiI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="https://youtube.com/embed/FebpXzROB2A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+    <!-- Second Horizontal Line -->
+    <div class="horizontal-line-2"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Created By: Sophia Callesen | With Gratitude ❤️<br><br>Feel Free to Reach Out to Collaborate!<br><br><br>
+    </footer>
+</body>
+</html>
