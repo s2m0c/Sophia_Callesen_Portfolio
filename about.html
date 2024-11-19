@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia Callesen Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Vollkorn', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        /* Menu Bar */
+        .menu-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 40px 2%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Left Social Buttons */
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-button {
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+        }
+
+        /* Right Menu Links */
+        .menu-links {
+            display: flex;
+            gap: 5px;
+            margin-right: 50px;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        /* Contact Button */
+        .contact-button {
+            border: 2px solid #FFFFFF;
+            padding: 8px 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        /* Horizontal Line */
+        .horizontal-line-1 {
+            width: 100%;
+            border-top: 33px solid #A9A9A9;
+            margin-top: 90px; /* Space below menu bar */
+        }
+
+         /* Horizontal Line */
+         .horizontal-line-2 {
+            width: 100%;
+            border-top: 1px solid #A9A9A9;
+            margin-top: 70px; /* Space below menu bar */
+        }
+    
+        /* Top Image */
+        .image-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Header */
+        .main-header {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 1in;
+            margin-bottom: 0.75in;
+        }
+
+        /* About Me Section */
+        .about-section {
+            text-align: center;
+        }
+
+        .about-section p {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* Centered Text Block */
+        .centered-text {
+            text-align: center;
+            display: block;
+            margin: 20px 0; /* Adjust space around the centered text */
+        }
+
+        /* Centered Text Block */
+        .centered-text {
+            text-align: center;
+            margin-bottom: 30px; /* You can adjust this value as needed */
+        }
+
+        /* Education Section */
+        .about-section-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Container for each education entry */
+        .education-entry {
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Custom paragraph styling */
+        .education-paragraph {
+            padding-left: 10px; /* Adds slight padding to align paragraphs more to the left */
+            margin: 0;
+        }
+
+        /* List styling */
+        .education-list {
+            list-style-type: disc;
+            padding-left: 30px; /* Indent the list to align with paragraph end */
+            margin-top: 10px;
+        }
+
+        /* Container for each education entry 2 */
+        .education-entry-2 {
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Custom paragraph styling 2 */
+        .education-paragraph-2 {
+            padding-right: 20px; /* Adds slight padding to align paragraphs more to the left */
+            margin: 0;
+        }
+
+        /* List styling 2 */
+        .education-list-2 {
+            list-style-type: disc;
+            padding-left: 20px; /* Indent the list to align with paragraph end */
+            margin-top: 10px;
+        }
+
+        /* Container for each training entry */
+        .training-entry {
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Custom paragraph styling training */
+        .training-paragraph {
+            padding-left: 10px; /* Adds slight padding to align paragraphs more to the left */
+            margin: 0;
+        }
+
+        /* List styling training */
+        .training-list {
+            list-style-type: disc;
+            padding-left: 30px; /* Indent the list to align with paragraph end */
+            margin-top: 10px;
+        }
+
+        /* Container for each education entry training 2 */
+        .training-entry-2 {
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Custom paragraph styling training 2 */
+        .training-paragraph-2 {
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        /* List styling training 2 */
+        .training-list-2 {
+            list-style-type: disc;
+            padding-left: 20px; /* Indent the list to align with paragraph end */
+            padding-right: 70px;
+            margin-top: 10px;
+        }
+
+        /* Container for each training entry 3 */
+        .training-entry-3 {
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Custom paragraph styling training 3 */
+        .training-paragraph-3 {
+            padding-left: 0px; /* Adds slight padding to align paragraphs more to the left */
+            margin: 0;
+        }
+
+        /* List styling training 3 */
+        .training-list-3 {
+            list-style-type: disc;
+            padding-left: 20px; /* Indent the list to align with paragraph end */
+            margin-top: 10px;
+        }
+
+        /* Container for each education entry training 4 */
+        .training-entry-4 {
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Custom paragraph styling training 4 */
+        .training-paragraph-4 {
+            padding-left: 55px;
+            margin: 0;
+        }
+
+        /* List styling training 4 */
+        .training-list-4 {
+            list-style-type: disc;
+            padding-left: 75px; /* Indent the list to align with paragraph end */
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #FFFFFF;
+            margin-top: 0.5in; /* Reduced space above footer */
+            padding-bottom: 10px; /* Reduced space below footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <!-- Left Side: Social Buttons -->
+        <div class="social-buttons">
+            <a href="mailto:scallesen20@gmail.com" class="social-button" style="background-image: url('mail.png');" target="_blank"></a>
+            <a href="https://www.youtube.com/@SophiaCallesen" class="social-button" style="background-image: url('youtube.png');" target="_blank"></a>
+            <a href="https://www.instagram.com/sophia_callesen20/" class="social-button" style="background-image: url('insta.png');" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/sophia-callesen-205326218/" class="social-button" style="background-image: url('linkedin2.png');" target="_blank"></a>
+        </div>
+        
+        <!-- Right Side: Menu Links and Contact Button -->
+        <div class="menu-links">
+            <a href="index.html" class="menu-item">Home</a>
+            <a href="about.html" class="menu-item">About</a>
+            <a href="work.html" class="menu-item">Work</a>
+            <a href="https://scallese.wixsite.com/mysite" class="menu-item" target="_blank">AIR</a>
+            <a href="mailto:scallesen20@gmail.com" class="contact-button">Contact</a>
+        </div>
+    </div>
+
+    <!-- Top Image -->
+    <div class="image-container">
+        <img src="Profile-Pic.jpeg" alt="Profile Image">
+    </div>
+
+    <!-- Header -->
+    <h1 class="main-header">Sophia Callesen</h1>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <p>Hi, I'm Sophie!
+            <br><br>I'm an experience designer, world-builder, breaker, creator, artist, practitioner, and researcher interested in creating spaces of safety, inclusivity, and change through the power of immersive narrative.
+            <br><br>My creative-process methodology and interests stem from utilizing my transdisciplinary background in the cognitive sciences and theatre to delve deeper into how to evoke certain emotions from participants on a physiological and behavioral level during an experience.
+            <br><br>My work extends from immersive experience building, to game design, UI, performing, scientific-behavioral research studies, cultural sensitivity studies, web development, and graphic design.
+            <br><br>I graduated from Arizona State University: Barrett, The Honors College with degrees in Biological Sciences (Neurobiology, Physiology, and Behavior), Theatre, and Italian. More recently, I've been teaching myself how to code in various languages in hopes that I will be able to create XR experiences through Unreal Engine and Unity.
+            <br><br>My ultimate goal is to create XR (VR, AR, MR) immersive experiences that help build and provide a platform for minorities and those belonging to marginalized identities.
+            <br><br>
+        <!-- Centered Text Block -->
+            <span class="centered-text">Personal Diversity Statement I Uphold in all of my Work & Practices:
+            <br>~ I strive to foster a community that demands and creates positive change. People of all identities and expressions are welcome and heard. Welcome to our community; I can't wait to connect with you! ~
+            <br><br><br>Please feel free to reach out to me at scallesen20@gmail.com if you'd like to connect and/or collaborate!</span>
+        </p>
+    </section>
+
+    <!-- Header 2 -->
+    <h1 class="main-header">Education</h1>
+
+    <!-- About Section 2 - Education -->
+    <section class="about-section-2">
+        <div class="education-entry">
+            <p class="education-paragraph">BACHELOR OF SCIENCE | BACHELOR OF ARTS | BACHELOR OF ARTS |
+                <br>ARIZONA STATE UNIVERSITY: BARRETT, THE HONORS COLLEGE
+            </p>
+            <ul class="education-list">
+                <li>Major: Biological Sciences (Neurobiology, Physiology, and Behavior)</li>
+                <li>Major: Theatre</li>
+                <li>Major: Italian</li>
+                <li>Honors Thesis: The Arts Initiative for Refugees (A.I.R.)</li>
+                <li>GPA (Unweighted): 4.09</li>
+            </ul>
+        </div>
+
+        <div class="education-entry-2">
+            <p class="education-paragraph-2">BASIC-CODING PROFICIENCY CERTIFICATIONS | CODECADEMY</p>
+            <ul class="education-list-2">
+                <li>Object-Oriented Languages: C++ & Python</li>
+                <li>Declarative Programming Languages: SQL</li>
+                <li>Markup Languages: HTML & CSS</li>
+                <li>AI: Prompt Engineering</li>
+                <li>C++ for Unreal Engine Blueprints</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Header 2 -->
+    <h1 class="main-header">Higlighted Training</h1>
+
+    <!-- About Section 3 - Training -->
+    <section class="about-section-2">
+        <div class="training-entry">
+            <p class="training-paragraph">Extended Reality (XR)<br></p>
+            <ul class="training-list">
+                <li>Adobe Creative Cloud | Arizona State University | Robert Karimi & Max Bernstein</li>
+                <li>Storytelling | Arizona State University | Lance Gharavi</li>
+                <li>Interactive Participatory Performance:CollabHouse | Arizona State University | Robert Karimi</li>
+                <li>Performing in the Virtual | Arizona State University | Robert Karimi & Max Bernstein</li>
+                <li>Designing Extended Reality Experiences | Arizona State University | Shaoyu Su & Biayna Bogosian</li>
+                <br>
+            </ul>
+        </div>
+
+        <div class="training-entry-2">
+            <p class="training-paragraph-2">AUDIO ENGINEERING<br></p>
+            <ul class="training-list-2">
+                <li>Ableton & Max MSP | Arizona State University | Serena Ferrando & Kimberly Marshall</li>
+                <li>REAPER | Arizona State University | Daniel Jaquette</li>
+                <br><br>
+            </ul>
+        </div>
+
+        <div class="training-entry-3">
+            <p class="training-paragraph-3">DESIGN<br></p>
+            <ul class="training-list-3">
+                <li>Design & Composition | Arizona State University | William Kirkham</li>
+                <li>Theatre Production I/II | Arizona State University | Danielle Deutchmann</li>
+                <li>Principles of Dramatic Analysis | Arizona State University | Karen Jean Martinson</li>
+                <li>African American Theatre | Arizona State University | KJ Martinson & Crestcencia Ortiz-Barnett</li>
+                <li>Technical Theatre | Arizona State University | Heather (Digger) Feeney</li>
+                <li>Experimental Theatre & Performance | Arizona State University | Lance Gharavi</li>
+                <li>Advanced Stagecraft | Arizona State University | Heather (Digger) Feeney</li>
+                <li>Directing | Arizona State University | Marissa Barnathan</li>
+                <br><br>
+            </ul>
+        </div>
+
+        <div class="training-entry-4">
+            <p class="training-paragraph-4">LANGUAGE<br></p>
+            <ul class="training-list-4">
+                <li>Elementary Italian I/II | Arizona State University | Sandra Palaich</li>
+                <li>Intermediate Italian I/II | Arizona State University | Antonella Dell'Anna</li>
+                <li>Speak Italy: Language, People, Culture | Scuola Dante Alighieri Recanati | Gina Pietrantoni & Juliann Vitullo</li>
+                <li>Advanced Italian | Scuola Dante Alighieri Recanati | Gina Pietrantoni & Juliann Vitullo</li>
+                <li>A1 Spanish | Duolingo</li>
+                <li>A1 French | Duolingo</li>
+                <br><br>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Second Horizontal Line -->
+    <div class="horizontal-line-2"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Created By: Sophia Callesen | With Gratitude ❤️<br><br>Feel Free to Reach Out to Collaborate!<br><br><br>
+    </footer>
+</body>
+</html>
