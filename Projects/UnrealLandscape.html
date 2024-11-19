@@ -124,8 +124,21 @@
             margin-right: 2in;
         }
 
-        /* Add 1.5in margin below the last video */
-        .last-video {
+        /* Image and Video Styling */
+        .media-container {
+            display: flex;
+            justify-content: center;
+            margin: 0.5in auto; /* 1 inch of space between video containers */
+            max-width: calc(100% - 1in); /* 0.5 inch on each side */
+        }
+
+        .media-container img, .media-container iframe {
+            width: 100%;
+            height: 500px; /* Set this to the desired height */
+        }
+
+        /* Last Video Spacing */
+        .video-container:last-of-type {
             margin-bottom: 0.75in;
         }
 
@@ -209,9 +222,13 @@
         <img src="UnrealPCG Pics/6.png" alt="Image 6" class="media-item">
         <img src="UnrealPCG Pics/7.png" alt="Image 7" class="media-item">
         <img src="UnrealPCG Pics/8.png" alt="Image 7" class="media-item">
-        <video src="UnrealPCG Pics/9.mov" muted playsinline controls class="media-item last-video"></video>
     </div>
         
+    <!-- Video Section -->
+    <div class="media-container video-container">
+        <iframe src="https://youtube.com/embed/XOCj26N43lc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <!-- Second Horizontal Line -->
     <div class="horizontal-line-2"></div>
 
