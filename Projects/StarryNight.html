@@ -108,24 +108,42 @@
             font-size: 1em;
         }
 
-        /* Media item section */
+        /* Media Section Styling */
         .media-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 0.5in;
+            padding-top: 1in;
         }
 
-        /* Image and video styling */
+        /* Image Row Styling */
+        .image-row {
+            display: flex;
+            gap: 0.125in; /* 1/8 inch gap between images */
+            margin-bottom: 0.5in; /* 0.5 inch space between rows */
+        }
+
+        /* Image Styling */
         .media-item {
-            max-width: 100%;
-            margin-top: 0.5in;
-            margin-left: 2in;
-            margin-right: 2in;
+            width: calc(50% - 0.125in); /* Adjust width to fit side-by-side */
+            object-fit: cover; /* Ensures the entire image fits */
         }
 
-        /* Add 1.5in margin below the last video */
-        .last-video {
+        /* Image and Video Styling */
+        .media-container {
+            display: flex;
+            justify-content: center;
+            margin: 0.5in auto; /* 1 inch of space between video containers */
+            max-width: calc(100% - 1in); /* 0.5 inch on each side */
+        }
+
+        .media-container img, .media-container iframe {
+            width: 100%;
+            height: 500px; /* Set this to the desired height */
+        }
+
+        /* Last Video Spacing */
+        .video-container:last-of-type {
             margin-bottom: 0.75in;
         }
 
@@ -174,7 +192,7 @@
     <div class="content-wrapper">
         
         <!-- Header Section -->
-        <h1 class="main-header">Dreams and Dangers:<br>A Starry Night Experience<br>(CURRENT WORK IN PROGESS)</h1>
+        <h1 class="main-header">Dreams and Dangers:<br>A Starry Night Experience<br>(IN DEVELOPMENT)</h1>
         
         <!-- Intro Text Section -->
         <p class="intro-text">"Dreams and Dangers: A Starry Night Experience"</p>
@@ -188,10 +206,12 @@
             <p class="role-text">Designer & Developer (Engine: Unreal Engine 5.4)
                 <br>Co-3D Modeler (Blender)
                 <br>Neural Style Transfer Programmer (Pytorch, Python, and ONNX)
-                <br>Documentor (Storytelling & Scripts)
+                <br>Documentor (Pitch & Playtests)
+                <br>Creator & Writer (Storytelling & Scripts)
+                <br>Graphic Designer (Adobe Photoshop)
                 <br>VR Experience
                 <br>Live VR Immersive Experience
-                <br>Contributors & Credits: Hajin Ahn & Josiane Isingizwe
+                <br>Contributors & Credits: Hajin Ahn
             </p>
 
         <!-- Role Header -->
@@ -203,17 +223,88 @@
             <br>~The video illustrates </p>
 
         <!-- Media Content Section -->
-            <div class="media-section">
-                <!-- Images and videos stacked with spacing as described -->
-                <img src="Pics/1.png" alt="Image 1" class="media-item">
-                <img src="Pics/2.png" alt="Image 2" class="media-item">
-                <img src="Pics/3.png" alt="Image 3" class="media-item">
-                <img src="Pics/4.png" alt="Image 4" class="media-item">
-                <img src="Pics/5.png" alt="Image 5" class="media-item">
-                <img src="Pics/6.png" alt="Image 6" class="media-item">
-                <img src="Pics/7.png" alt="Image 7" class="media-item">
-                <img src="Pics/8.png" alt="Image 7" class="media-item">
-                <video src="Pics/9.mov" muted playsinline controls class="media-item last-video"></video>
+        <div class="media-section">
+            <!-- Image rows with 2 images per row -->
+            <div class="image-row">
+                <img src="StarryNight Pics/1.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/2.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/3.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/4.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/5.jpeg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/6.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/7.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/8.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/9.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/10.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/11.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/12.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/13.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/14.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/15.png" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/16.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/17.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/18.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/19.png" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/20.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/21.png" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/22.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/23.png" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/24.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/25.jpg" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/26.jpg" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/27.png" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/28.png" alt="Image 2" class="media-item">
+            </div>
+            <div class="image-row">
+                <img src="StarryNight Pics/29.png" alt="Image 1" class="media-item">
+                <img src="StarryNight Pics/30.png" alt="Image 2" class="media-item">
+            </div>
+        </div>
+
+        <!-- Video Section -->
+            <div class="media-container video-container">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="media-container video-container">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
     <!-- Second Horizontal Line -->
