@@ -89,7 +89,7 @@
         }
 
 
-        /* Section 2 and Section 3 Grid Styling */
+        /* Section 1 */
         .image-grid {
             display: flex;
             flex-direction: column;
@@ -111,6 +111,38 @@
             height: auto;
         }
 
+
+        /* Section 2 Styling */
+        .pdf-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%; /* Restrict to 75% of the screen */
+            margin: 0 auto; /* Center the grid */
+            gap: 0.30in; /* Add space between rows */
+        }
+
+        .pdf-row {
+            display: flex;
+            gap: 0.30in; /* Space between PDF containers */
+            justify-content: center;
+        }
+
+        .pdf-container {
+            width: calc(50% - 0.15in); /* Two items per row for large screens */
+            aspect-ratio: 8.5 / 11; /* Standard portrait aspect ratio */
+            border: 1px solid #FFFFFF; /* Optional: Add border for visual clarity */
+            overflow: hidden;
+        }
+
+        /* Ensure PDF content fits inside */
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
         /* Responsive Styling */
         @media (max-width: 768px) {
             .section-header {
@@ -119,6 +151,14 @@
 
             .row img, .row video {
                 width: 90%; /* Adjust width for smaller screens */
+            }
+            
+            .pdf-container {
+                width: 100%; /* Full-width for smaller screens */
+            }
+            .pdf-row {
+                flex-direction: column; /* Stack items in a single column */
+                gap: 0.25in; /* Reduce spacing for smaller screens */
             }
         }
 
@@ -176,11 +216,21 @@
     <!-- Section 2 -->
     <section class="section">
         <h1 class="section-header">Ephemera Designs</h1>
-        <div class="image-grid">
-            <div class="row">
-                <img src="Digital Design Pics/E1.pdf" alt="Image 2">
-                <img src="Digital Design Pics/E2.pdf" alt="Image 3">
-                <img src="Digital Design Pics/E3.pdf" alt="Image 4">
+        <div class="pdf-grid">
+            <!-- First Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E1.pdf" title="PDF 1"></iframe>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E2.pdf" title="PDF 2"></iframe>
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E3.pdf" title="PDF 3"></iframe>
+                </div>
             </div>
         </div>
     </section>
