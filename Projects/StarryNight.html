@@ -147,6 +147,49 @@
             margin-bottom: 0.75in;
         }
 
+
+        /* Section 2 Styling */
+        .pdf-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%; /* Restrict to 75% of the screen */
+            margin: 0 auto; /* Center the grid */
+            gap: 0.30in; /* Add space between rows */
+        }
+
+        .pdf-row {
+            display: flex;
+            gap: 0.30in; /* Space between PDF containers */
+            justify-content: center;
+        }
+
+        .pdf-container {
+            width: calc(50% - 0.15in); /* Two items per row for large screens */
+            aspect-ratio: 8.5 / 11; /* Standard portrait aspect ratio */
+            border: 1px solid #FFFFFF; /* Optional: Add border for visual clarity */
+            overflow: hidden;
+        }
+
+        /* Ensure PDF content fits inside */
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .pdf-container {
+                width: 100%; /* Full-width for smaller screens */
+            }
+            .pdf-row {
+                flex-direction: column; /* Stack items in a single column */
+                gap: 0.25in; /* Reduce spacing for smaller screens */
+            }
+        }
+
+
          /* Horizontal Line */
          .horizontal-line-2 {
             width: 100%;
@@ -282,6 +325,7 @@
             <br>~Images 15-22 depict the Gallery of Echoes, where players are free to roam about and interact with any object in the room.
             <br>~Images 23-24 depict the 9 actions that can be carried out in the Gallery of Echoes to simulate affecting climate change.
             <br>~Images 25-30 depict the Hall of Whispers, which is the 2nd museum encountered.
+            <br>~The PDFs are the Design & narration Scripts for the Experience.
             <br>~Videos 1-3 illustrate full walkthroughs of each portion of the experience.
             <br>~Videos 4 illustrates the transitions into each room.
             <br>~Video 5-6 illustrate interactive components.
@@ -353,6 +397,23 @@
                 <img src="StarryNight Pics/30.jpg" alt="Image 2" class="media-item">
             </div>
         </div>
+
+    
+    <!-- PDF Section -->
+    <section class="section">
+        <div class="pdf-grid">
+            <!-- First Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="StarryNight Pics/1.pdf" title="PDF 1"></iframe>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="StarryNight Pics/2.pdf" title="PDF 2"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
         <!-- Video Section -->
             <div class="media-container video-container">
