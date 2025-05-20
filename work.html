@@ -11,7 +11,10 @@
             font-family: 'Vollkorn', serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background-image: url('Background.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the entire screen */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Make the background fixed so it doesn't scroll */
             color: #FFFFFF;
         }
         
@@ -20,7 +23,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black to make text readable */
             padding: 40px 2%;
             position: fixed;
             width: 100%;
@@ -65,7 +68,6 @@
         /* Horizontal Line */
         .horizontal-line-1 {
             width: 100%;
-            border-top: 33px solid #A9A9A9;
             margin-top: 90px; /* Space below menu bar */
         }
 
@@ -75,7 +77,8 @@
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             padding: 20px;
-            margin-top: 50px;
+            margin-top: 1.75in;
+
         }
 
         .work-item {
