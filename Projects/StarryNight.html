@@ -11,7 +11,10 @@
             font-family: 'Vollkorn', serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background-image: url('../Background.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the entire screen */
+            background-position: center; /* Position the image at the center */
+            background-attachment: fixed; /* Fix the background image so it doesn't scroll */
             color: #FFFFFF;
         }
         
@@ -20,7 +23,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black for readability */
             padding: 40px 2%;
             position: fixed;
             width: 100%;
@@ -65,8 +68,7 @@
         /* Horizontal Line */
         .horizontal-line-1 {
             width: 100%;
-            border-top: 33px solid #A9A9A9;
-            margin-top: 90px; /* Space below menu bar */
+            margin-top: 1.75in; /* Space below menu bar */
         }
 
         /* Reset styles */
@@ -147,7 +149,6 @@
             margin-bottom: 0.75in;
         }
 
-
         /* Section 2 Styling */
         .pdf-grid {
             display: flex;
@@ -189,9 +190,8 @@
             }
         }
 
-
-         /* Horizontal Line */
-         .horizontal-line-2 {
+        /* Horizontal Line */
+        .horizontal-line-2 {
             width: 100%;
             border-top: 1px solid #A9A9A9;
             margin-top: 70px; /* Space below menu bar */
@@ -233,7 +233,6 @@
 
     <!-- Centered Main Content -->
     <div class="content-wrapper">
-        
         <!-- Header Section -->
         <h1 class="main-header">Dreams and Dangers:<br>A Starry Night Experience<br>(CURRENTLY STILL IN DEVELOPMENT)</h1>
         
@@ -437,13 +436,14 @@
             <div class="media-container video-container">
                 <iframe src="https://youtube.com/embed/NmqNbtClgtc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            
+        <!-- Second Horizontal Line -->
+            <div class="horizontal-line-2"></div>
 
-    <!-- Second Horizontal Line -->
-    <div class="horizontal-line-2"></div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        Created By: Sophia Callesen | With Gratitude ❤️<br><br>Feel Free to Reach Out to Collaborate!<br><br><br>
-    </footer>
+        <!-- Footer -->
+        <div class="footer">
+            Created By: Sophia Callesen | With Gratitude ❤️<br><br>Feel Free to Reach Out to Collaborate!<br><br><br>
+        </div>
+    </div>
 </body>
 </html>
