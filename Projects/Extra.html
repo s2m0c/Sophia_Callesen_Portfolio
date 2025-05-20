@@ -130,6 +130,56 @@
             }
         }
 
+        /* Section 2 Styling */
+        .pdf-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%; /* Restrict to 75% of the screen */
+            margin: 0 auto; /* Center the grid */
+            gap: 0.30in; /* Add space between rows */
+        }
+
+        .pdf-row {
+            display: flex;
+            gap: 0.30in; /* Space between PDF containers */
+            justify-content: center;
+        }
+
+        .pdf-container {
+            width: calc(50% - 0.15in); /* Two items per row for large screens */
+            aspect-ratio: 8.5 / 11; /* Standard portrait aspect ratio */
+            border: 1px solid #FFFFFF; /* Optional: Add border for visual clarity */
+            overflow: hidden;
+        }
+
+        /* Ensure PDF content fits inside */
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .section-header {
+                font-size: 1.2rem;
+            }
+
+            .row img, .row video {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+            
+            .pdf-container {
+                width: 100%; /* Full-width for smaller screens */
+            }
+            .pdf-row {
+                flex-direction: column; /* Stack items in a single column */
+                gap: 0.25in; /* Reduce spacing for smaller screens */
+            }
+        }
+
         /* Horizontal Line */
         .horizontal-line-2 {
             width: 100%;
@@ -179,28 +229,26 @@
         </div>
     </section>
 
-    <!-- Section 2 -->
+    <!-- Section 1 -->
     <section class="section">
-        <h1 class="section-header">Photography</h1>
+        <h1 class="section-header">Immersive Experience Graphic Designs</h1>
         <div class="image-grid">
+            <!-- First Row: Profile-Oriented PNGs -->
             <div class="row">
-                <img src="Extra Pics/P3.jpeg" alt="Image 2">
-                <img src="Extra Pics/P11.jpg" alt="Image 3">
-                <img src="Extra Pics/P5.jpg" alt="Image 4">
-                <img src="Extra Pics/P9.jpg" alt="Image 5">
+                <img src="Digital Design Pics/I1.jpg" alt="Profile Image 1">
+                <img src="Digital Design Pics/I3.png" alt="Profile Image 2">
             </div>
+            <!-- Second Row: Landscape-Oriented PNG and GIF -->
             <div class="row">
-                <img src="Extra Pics/P4.jpg" alt="Image 6">
-                <img src="Extra Pics/P7.jpg" alt="Image 7">
-                <img src="Extra Pics/P1.JPG" alt="Image 8">
-                <img src="Extra Pics/P10.jpg" alt="Image 9">
+                <img src="Digital Design Pics/I2.GIF" alt="Landscape Animated GIF">
+                <img src="Digital Design Pics/I4.png" alt="Landscape Image 1">
             </div>
         </div>
     </section>
 
     <!-- Section 3 -->
     <section class="section">
-        <h1 class="section-header">Sketches & Drawings</h1>
+        <h1 class="section-header">Drawings & Animations</h1>
         <div class="image-video-grid">
             <div class="row">
                 <img src="Extra Pics/A4.png" alt="Image 10">
@@ -213,6 +261,28 @@
                 <video controls src="Extra Pics/2.mp4"></video>
                 <video controls src="Extra Pics/3.mp4"></video>
                 <video controls src="Extra Pics/4.mp4"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section">
+        <h1 class="section-header">Ephemera Designs</h1>
+        <div class="pdf-grid">
+            <!-- First Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E1.pdf" title="PDF 1"></iframe>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E2.pdf" title="PDF 2"></iframe>
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E3.pdf" title="PDF 3"></iframe>
+                </div>
             </div>
         </div>
     </section>
