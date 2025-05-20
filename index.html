@@ -87,14 +87,15 @@
 
         /* Top Image */
         .image-container {
-            width: 100%;
+            width: 75%; /* Set the image container to 75% of the screen width */
+            margin: 1.5in auto 0; /* Auto on left and right to center the container */
             overflow: hidden;
-            margin-top: 1.5in; /* Space beneath header */
         }
-
+        
+        /* Image Styling */
         .image-container img {
-            width: 100%;
-            height: auto;
+            width: 100%; /* Ensure the image fills the container */
+            height: auto; /* Maintain aspect ratio */
         }
 
         /* About Me Section */
@@ -128,31 +129,39 @@
             margin-bottom: 30px; /* You can adjust this value as needed */
         }
 
-        /* Button Section */
         .button-section {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 70px;
             margin-top: 1in;
             margin-bottom: 1.5in;
         }
-
+        
+        /* Button Styling */
         .button {
-            width: 80px;
-            height: 80px;
-            border: 1px solid #FFFFFF;
+            width: 90px;
+            height: 90px;
+            border: 3px solid #cfdee2;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: #FFFFFF;
+            color: #cfdee2;
             font-size: 1em;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+        }
+        
+        /* Button Hover Styling */
+        .button:hover {
+            background-color: #f7f7f7; /* Blue background when hovered */
+            color: #ffffff; /* White text when hovered */
+            border-color: #fafbfb; /* Border turns blue as well */
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            font-size: 0.9em;
+            font-size: 1.5em;
             color: #FFFFFF;
             margin-top: 0.5in; /* Reduced space above footer */
             padding-bottom: 10px; /* Reduced space below footer */
