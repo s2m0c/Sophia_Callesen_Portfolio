@@ -11,16 +11,19 @@
             font-family: 'Vollkorn', serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
-            color: #FFFFFF;
-        }
+            background-image: url('../Background.jpg'); /* Use the image as the background */
+            background-size: cover; /* Ensures the image covers the entire screen */
+            background-position: center; /* Position the image at the center */
+            background-attachment: fixed; /* Fix the background image so it doesn't scroll */
+            color: #FFFFFF; /* Maintain text color for readability */
+        }        
         
         /* Menu Bar */
         .menu-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black to make text readable */
             padding: 40px 2%;
             position: fixed;
             width: 100%;
@@ -65,14 +68,7 @@
         /* Horizontal Line */
         .horizontal-line-1 {
             width: 100%;
-            border-top: 33px solid #A9A9A9;
-            margin-top: 90px; /* Space below menu bar */
-        }
-         /* Horizontal Line */
-         .horizontal-line-2 {
-            width: 100%;
-            border-top: 1px solid #A9A9A9;
-            margin-top: 70px; /* Space below menu bar */
+            margin-top: 1.75in; /* Space below menu bar */
         }
 
         /* General Section Styling */
@@ -160,6 +156,13 @@
                 flex-direction: column; /* Stack items in a single column */
                 gap: 0.25in; /* Reduce spacing for smaller screens */
             }
+        }
+
+        /* Horizontal Line */
+        .horizontal-line-2 {
+            width: 100%;
+            border-top: 1px solid #A9A9A9;
+            margin-top: 70px; /* Space below menu bar */
         }
 
         /* Footer */
