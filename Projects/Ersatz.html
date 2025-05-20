@@ -11,16 +11,19 @@
             font-family: 'Vollkorn', serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
-            color: #FFFFFF;
-        }
+            background-image: url('../Background.jpg'); /* Use the image as the background */
+            background-size: cover; /* Ensures the image covers the entire screen */
+            background-position: center; /* Position the image at the center */
+            background-attachment: fixed; /* Fix the background image so it doesn't scroll */
+            color: #FFFFFF; /* Maintain text color for readability */
+        }        
         
         /* Menu Bar */
         .menu-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black to make text readable */
             padding: 40px 2%;
             position: fixed;
             width: 100%;
@@ -65,8 +68,7 @@
         /* Horizontal Line */
         .horizontal-line-1 {
             width: 100%;
-            border-top: 33px solid #A9A9A9;
-            margin-top: 90px; /* Space below menu bar */
+            margin-top: 1.75in; /* Space below menu bar */
         }
 
         /* Reset styles */
@@ -108,26 +110,26 @@
             font-size: 1em;
         }
 
-/* Media Section Styling */
-.media-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1in;
-}
+        /* Media Section Styling */
+        .media-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 1in;
+        }
 
-/* Image Row Styling */
-.image-row {
-    display: flex;
-    gap: 0.125in; /* 1/8 inch gap between images */
-    margin-bottom: 0.5in; /* 0.5 inch space between rows */
-}
+        /* Image Row Styling */
+        .image-row {
+            display: flex;
+            gap: 0.125in; /* 1/8 inch gap between images */
+            margin-bottom: 0.5in; /* 0.5 inch space between rows */
+        }
 
-/* Image Styling */
-.media-item {
-    width: calc(50% - 0.125in); /* Adjust width to fit side-by-side */
-    object-fit: cover; /* Ensures the entire image fits */
-}
+        /* Image Styling */
+        .media-item {
+            width: calc(50% - 0.125in); /* Adjust width to fit side-by-side */
+            object-fit: cover; /* Ensures the entire image fits */
+        }
 
         /* Image and Video Styling */
         .media-container {
@@ -219,6 +221,7 @@
                                 create something beautiful with them because everyone is beautiful in their own special, unique way. 
                                 <br><br>ERSATZ welcomed a community that demanded and created positive change. ERSATZ welcomed people of all identities and expressions. ERSATZ made people heard. Welcome to ERSATZ. Welcome to the revolution that is: The Glitch... 
             <br><br><br>*For more information & documentation about this project follow this <a href="https://scallese.wixsite.com/ersatzglitch" target="_blank" rel="noopener noreferrer">link</a>*
+            <br><br>*This piece premiered at a showcase called "Mash Up Collaboration" produced by Robert Farid Karimi in Katzin Hall at Arizona State University*</p>
 
         
         <!-- Role Header 1 -->
