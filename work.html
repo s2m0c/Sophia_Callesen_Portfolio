@@ -11,12 +11,12 @@
             font-family: 'Vollkorn', serif;
             margin: 0;
             padding: 0;
-            background-image: url('Background.jpg'); /* Set the background image */
-            background-size: cover; /* Ensure the image covers the entire screen */
-            background-position: center; /* Center the image */
-            background-attachment: fixed; /* Make the background fixed so it doesn't scroll */
-            color: #FFFFFF;
-        }
+            background-image: url('../Background.jpg'); /* Use the image as the background */
+            background-size: cover; /* Ensures the image covers the entire screen */
+            background-position: center; /* Position the image at the center */
+            background-attachment: fixed; /* Fix the background image so it doesn't scroll */
+            color: #FFFFFF; /* Maintain text color for readability */
+        }        
         
         /* Menu Bar */
         .menu-bar {
@@ -68,69 +68,125 @@
         /* Horizontal Line */
         .horizontal-line-1 {
             width: 100%;
-            margin-top: 90px; /* Space below menu bar */
+            margin-top: 1.75in; /* Space below menu bar */
         }
 
-        /* Work Section */
-        .work-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            margin-top: 1.75in;
-
-        }
-
-        .work-item {
-            background-color: #101010;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* General Section Styling */
+        .section {
+            padding: 1rem;
             text-align: center;
-            transition: transform 0.3s ease-in-out;
         }
 
-        .work-item img {
-            width: 100%;
+        /* Header Styling */
+        .section-header {
+            margin-top: 0.5in; /* 1/4 inch space below menu bar */
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Smaller Image Container in Section 1 */
+        .small-image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.25in;
+        }
+
+        .small-image {
+            width: 75%; /* Set to a smaller width, like 50% of the container */
+            max-width: 500px; /* Restrict the maximum width for desktop */
+            height: auto; /* Maintain aspect ratio */
+
+            padding: 5px;
+        }
+
+        /* Section 2 and Section 3 Grid Styling */
+        .image-grid, .image-video-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            gap: 0.125in; /* 1/8 inch spacing between images/videos */
+            justify-content: center;
+            margin-top: 0.25in;
+        }
+
+        .row img, .row video {
+            width: calc(25% - 0.125in); /* Adjust width to fit four items with spacing */
+            max-width: 100%;
             height: auto;
         }
 
-        .work-item h3 {
-            margin-top: 10px;
-            font-size: 1.5em;
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .section-header {
+                font-size: 1.2rem;
+            }
+
+            .row img, .row video {
+                width: 45%; /* Adjust width for smaller screens */
+            }
         }
 
-        .work-item p {
-            font-size: 1em;
-            margin-top: 10px;
-            color: #666;
+        /* Section 2 Styling */
+        .pdf-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%; /* Restrict to 75% of the screen */
+            margin: 0 auto; /* Center the grid */
+            gap: 0.30in; /* Add space between rows */
         }
 
-        /* Ensure the links inside work items don't affect layout */
-        .work-item a {
-            text-decoration: none;
-            color: inherit; /* Keeps the text color the same as the work item */
-            display: block; /* Makes the entire work item clickable */
+        .pdf-row {
+            display: flex;
+            gap: 0.30in; /* Space between PDF containers */
+            justify-content: center;
         }
 
-        /* Hover effect for work items */
-        .work-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        .pdf-container {
+            width: calc(50% - 0.15in); /* Two items per row for large screens */
+            aspect-ratio: 8.5 / 11; /* Standard portrait aspect ratio */
+            border: 1px solid #FFFFFF; /* Optional: Add border for visual clarity */
+            overflow: hidden;
         }
 
-         /* Horizontal Line */
-         .horizontal-line-2 {
+        /* Ensure PDF content fits inside */
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .section-header {
+                font-size: 1.2rem;
+            }
+
+            .row img, .row video {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+            
+            .pdf-container {
+                width: 100%; /* Full-width for smaller screens */
+            }
+            .pdf-row {
+                flex-direction: column; /* Stack items in a single column */
+                gap: 0.25in; /* Reduce spacing for smaller screens */
+            }
+        }
+
+        /* Horizontal Line */
+        .horizontal-line-2 {
             width: 100%;
             border-top: 1px solid #A9A9A9;
             margin-top: 70px; /* Space below menu bar */
         }
 
-        /* Header */
-        .main-header {
-            text-align: center;
-            font-size: 3.5em;
-            margin-top: 1.5in;
-        }
         /* Footer */
         .footer {
             text-align: center;
@@ -154,9 +210,9 @@
         
         <!-- Right Side: Menu Links and Contact Button -->
         <div class="menu-links">
-            <a href="index.html" class="menu-item">Home</a>
-            <a href="about.html" class="menu-item">About</a>
-            <a href="work.html" class="menu-item">Work</a>
+            <a href="../index.html" class="menu-item">Home</a>
+            <a href="../about.html" class="menu-item">About</a>
+            <a href="../work.html" class="menu-item">Work</a>
             <a href="https://scallese.wixsite.com/mysite" class="menu-item" target="_blank">AIR</a>
             <a href="mailto:scallesen20@gmail.com" class="contact-button">Contact</a>
         </div>
@@ -165,94 +221,71 @@
     <!-- Horizontal Line -->
     <div class="horizontal-line-1"></div>
 
-    <!-- Work Section -->
-    <section class="work-section">
-        <div class="work-item">
-            <a href="Projects/StarryNight.html">
-                <img src="StarryNightPoster.jpg" alt="Project 2">
-                <h3>Dreams and Dangers:<br> A Starry Night Experience</h3>
-                <p>Blender ~ REAPER ~<br> Unreal Engine ~ Pytorch & ONNX for NST ~<br> Live VR Immersive Experience</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/Ersatz.html">
-                <img src="ersatz2.png" alt="Project 1">
-                <h3>ERSATZ</h3>
-                <p>Canon 77d ~ Adobe PremierePro & Photoshop ~ REAPER ~ GarageBand ~<br> Live Projection ~ Live Immersive Experience</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/CulturalPotluck.html">
-                <img src="CP.png" alt="Project 2">
-                <h3>Cultural Potluck</h3>
-                <p>Insta 360 X3 ~ Adobe PremierePro ~<br> XR Experience ~ Live Immersive Experience</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/AuscultationHallucination.html">
-                <img src="AH.png" alt="Project 1">
-                <h3>Auscultation Hallucination</h3>
-                <p>Insta 360 X3 ~ Adobe PremierePro ~<br>REAPER ~ VR Experience ~<br> Live XR Immersive Experience</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/UnrealPCG.html">
-                <img src="pcg.png" alt="Project 2">
-                <h3>Unreal Engine Landscape</h3>
-                <p>Unreal Engine ~ PCG</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/UnrealLandscape.html">
-                <img src="FG.png" alt="Project 1">
-                <h3>Frasassi Grotte</h3>
-                <p>Unreal Engine</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/UnityLandscape.html">
-                <img src="Unity Landscape.png" alt="Project 2">
-                <h3>Unity Landscape</h3>
-                <p>Unity 3D ~ UI Interactivity</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/UnityBusinessCard.html">
-                <img src="BC.png" alt="Project 1">
-                <h3>AR Business Card</h3>
-                <p>Unity 3D ~ Vuforia</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/360Reframe.html">
-                <img src="360Reframe.png" alt="Project 1">
-                <h3>360 Reframe</h3>
-                <p>Insta 360 X2 ~ Adobe PremierePro</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/AudioEngineering.html">
-                <img src="Audio.png" alt="Project 2">
-                <h3>Audio Engineering</h3>
-                <p>REAPER</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/DigitalDesign.html">
-                <img src="Photography2.JPG" alt="Project 2">
-                <h3>Photography</h3>
-                <p>Contax G1 (Film) ~ Cannon 77D (Digital)</p>
-            </a>
-        </div>
-        <div class="work-item">
-            <a href="Projects/Extra.html">
-                <img src="Art.png" alt="Project 1">
-                <h3>Art & Design</h3>
-                <p>Adobe Creative Cloud ~ Microsoft Suite ~<br>Chalk Pastel ~ Charcoal ~ Procreate ~ Canva</p>
-            </a>
+    <!-- Section 1 -->
+    <section class="section">
+        <h2 class="section-header">Chalk Pastel</h2>
+        <div class="small-image-container">
+            <img src="Extra Pics/A2.jpg" alt="Centered Image" class="small-image">
         </div>
     </section>
 
+    <!-- Section 1 -->
+    <section class="section">
+        <h1 class="section-header">Immersive Experience Graphic Designs</h1>
+        <div class="image-grid">
+            <!-- First Row: Profile-Oriented PNGs -->
+            <div class="row">
+                <img src="Digital Design Pics/I1.jpg" alt="Profile Image 1">
+                <img src="Digital Design Pics/I3.png" alt="Profile Image 2">
+            </div>
+            <!-- Second Row: Landscape-Oriented PNG and GIF -->
+            <div class="row">
+                <img src="Digital Design Pics/I2.GIF" alt="Landscape Animated GIF">
+                <img src="Digital Design Pics/I4.png" alt="Landscape Image 1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section">
+        <h1 class="section-header">Drawings & Animations</h1>
+        <div class="image-video-grid">
+            <div class="row">
+                <img src="Extra Pics/A4.png" alt="Image 10">
+                <img src="Extra Pics/A3.png" alt="Image 11">
+                <img src="Extra Pics/A1.png" alt="Image 12">
+                <img src="Extra Pics/A5.PNG" alt="Image 13">
+            </div>
+            <div class="row">
+                <video controls src="Extra Pics/1.mp4"></video>
+                <video controls src="Extra Pics/2.mp4"></video>
+                <video controls src="Extra Pics/3.mp4"></video>
+                <video controls src="Extra Pics/4.mp4"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section">
+        <h1 class="section-header">Ephemera Designs</h1>
+        <div class="pdf-grid">
+            <!-- First Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E1.pdf" title="PDF 1"></iframe>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E2.pdf" title="PDF 2"></iframe>
+                </div>
+            </div>
+            <!-- Second Row -->
+            <div class="pdf-row">
+                <div class="pdf-container">
+                    <iframe src="Digital Design Pics/E3.pdf" title="PDF 3"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Second Horizontal Line -->
     <div class="horizontal-line-2"></div>
@@ -261,8 +294,5 @@
     <footer class="footer">
         Created By: Sophia Callesen | With Gratitude ❤️<br><br>Feel Free to Reach Out to Collaborate!<br><br><br>
     </footer>
-
-    <script src="script.js"></script>
-    
 </body>
 </html>
