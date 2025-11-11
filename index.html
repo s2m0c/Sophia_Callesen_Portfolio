@@ -16,7 +16,20 @@
             background-position: center center; /* Center the image */
             background-attachment: fixed; /* Keep the background fixed during scrolling */
             color: #FFFFFF;
+            height: 100%;
+            cursor: default;     /* hide native cursor */
         }
+
+        /* Particle Cursor Canvas */
+        canvas.particle-cursor {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen; /* keeps glow bright over dark backgrounds */
+          }
         
         /* Menu Bar */
         .menu-bar {
@@ -177,6 +190,11 @@
     </style>
 </head>
 <body>
+    <!-- Canvas element for the glowing cursor -->
+    <canvas class="particle-cursor"></canvas>
+    
+    <!-- JS Cursor Reference-->
+    <script src="script.js"></script>
 
     <!-- Menu Bar -->
     <div class="menu-bar">
@@ -243,4 +261,3 @@
     </footer>
 </body>
 </html>
-
