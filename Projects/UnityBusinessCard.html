@@ -11,12 +11,25 @@
             font-family: 'Vollkorn', serif;
             margin: 0;
             padding: 0;
-            background-image: url('../Background.jpg'); /* Use the image as the background */
-            background-size: cover; /* Ensures the image covers the entire screen */
-            background-position: center; /* Position the image at the center */
-            background-attachment: fixed; /* Fix the background image so it doesn't scroll */
-            color: #FFFFFF; /* Maintain text color for readability */
-        }        
+            background-image: url('../Background.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the entire viewport */
+            background-position: center center; /* Center the image */
+            background-attachment: fixed; /* Keep the background fixed during scrolling */
+            color: #FFFFFF;
+            height: 100%;
+            cursor: default;     /* hide native cursor */
+        }
+
+        /* Particle Cursor Canvas */
+        canvas.particle-cursor {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen; /* keeps glow bright over dark backgrounds */
+          }      
         
         /* Menu Bar */
         .menu-bar {
@@ -161,6 +174,12 @@
     </style>
 </head>
 <body>
+    <!-- Canvas element for the glowing cursor -->
+    <canvas class="particle-cursor"></canvas>
+    
+    <!-- JS Cursor Reference-->
+    <script src="../script.js"></script>
+
     <!-- Menu Bar -->
     <div class="menu-bar">
         <!-- Left Side: Social Buttons -->
